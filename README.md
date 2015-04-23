@@ -415,3 +415,6 @@ Common typos:
     alias mf="mv -i"
     alias mroe="more"
     alias c='clear'
+
+rename fasta with numerical headers
+    awk '/^>/{print ">" ++i; next}{print}' < master_assembly.fasta > rename.fasta
